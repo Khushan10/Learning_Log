@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#x)erp*-k&e=rcbkv6f2p6ybg6k(s$9f^j5o#jykj8)qrdse+m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'learning_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,7 +142,7 @@ BOOTSTRAP3 = {
 if(os.getcwd() == '/app'):
     import dj_database_url
     DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
+        'default': dj_database_url.config(default='postgres://127.0.0.1')
     }
     # Honor the 'X-Forwarded-Proto' header for request.sisecure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
