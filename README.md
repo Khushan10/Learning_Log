@@ -1,3 +1,3 @@
 # Learning_Log
 
-Project finializing in development will be uploaded in a week. Thanks for having patience.
+A web application to keep record of all what you learning about. A perfect application for always growing users.
